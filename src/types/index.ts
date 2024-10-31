@@ -44,7 +44,7 @@ export type Character = {
     images: Array<string>
     id: number
     name: string
-    family: FamilyInfo
+    family?: FamilyInfo
     personal: PersonalInfo
     tools?: Array<string>
     rank?: RankInfo

@@ -13,11 +13,11 @@ type CharacterCardProps = {
 export default function ModalCharacter({ character }: CharacterCardProps) {
     return (
         <div key={character.id} className=" bg-white rounded-lg flex flex-col items-center shadow-2xl p-5 w-3/4 lg:w-3/5 m-auto">
-            <Carousel arrows dotPosition="left" infinite={true} autoplay style={{ backgroundColor: 'black', width: '80%', height: '80%', margin: 'auto', borderRadius: '10px' }}>
+            <Carousel arrows dotPosition="left" infinite={true} autoplay style={{ backgroundColor: 'black', width: '60%', height: '60%', margin: 'auto', borderRadius: '10px' }}>
                 {character.images && character.images.length > 0 ? (
                     character.images.map((image, index) => (
                         <div key={index} style={contentStyle}>
-                            <img src={image} alt={character.name} style={{ width: '80%', height: '80%', margin: 'auto' }} />
+                            <img src={image} alt={character.name} style={{ width: '60%', height: '60%', margin: 'auto' }} />
                         </div>
                     ))
                 ) : (
@@ -56,14 +56,14 @@ export default function ModalCharacter({ character }: CharacterCardProps) {
                 <div className="flex flex-col  lg:flex-row justify-around items-center p-4 space-y-8 lg:space-x-16">
                     <div>
                         <h2 className="text-xl font-bold text-center mb-2">Familia</h2>
-                        <p><span className="font-semibold">Padre:</span> {character.family.father ? character.family.father : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Madre:</span> {character.family.mother ? character.family.mother : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Padrino:</span> {character.family.godfather ? character.family.godfather : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Esposa: </span> {character.family.wife ? character.family.wife : 'Desconocida'}</p>
-                        <p><span className="font-semibold">Hijo: </span> {character.family.son ? character.family.son : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Hija: </span>{character.family.daughter ? character.family.daughter : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Hermano: </span>{character.family.brother ? character.family.brother : 'Desconocido'}</p>
-                        <p><span className="font-semibold">Abuela: </span>{character.family.grandmother ? character.family.grandmother : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Padre:</span> {character.family?.father ? character.family?.father : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Madre:</span> {character.family?.mother ? character.family?.mother : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Padrino:</span> {character.family?.godfather ? character.family?.godfather : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Esposa: </span> {character.family?.wife ? character.family?.wife : 'Desconocida'}</p>
+                        <p><span className="font-semibold">Hijo: </span> {character.family?.son ? character.family?.son : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Hija: </span>{character.family?.daughter ? character.family?.daughter : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Hermano: </span>{character.family?.brother ? character.family?.brother : 'Desconocido'}</p>
+                        <p><span className="font-semibold">Abuela: </span>{character.family?.grandmother ? character.family?.grandmother : 'Desconocido'}</p>
                     </div>
                     <div>
                         <h2 className="text-xl font-bold text-center mb-2">Rango</h2>
